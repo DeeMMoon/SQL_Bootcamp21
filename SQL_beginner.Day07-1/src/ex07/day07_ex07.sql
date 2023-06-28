@@ -1,0 +1,1 @@
+SELECT ROUND(avg(pz.rating), 4) FROM pizzeria AS pz
