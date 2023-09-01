@@ -1,64 +1,4 @@
-# Day 06 - Piscine SQL
-
-## _Let's improve customer experience_
-
-Resume: Today you will see how to add a new business feature into our data model
-
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Discounts, discounts , everyone loves discounts](#exercise-00-discounts-discounts-everyone-loves-discounts)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Let’s set personal discounts](#exercise-01-lets-set-personal-discounts)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Let’s recalculate a history of orders.](#exercise-02-lets-recalculate-a-history-of-orders)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Improvements are in a way](#exercise-03-improvements-are-in-a-way)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - We need more Data Consistency](#exercise-04-we-need-more-data-consistency)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Data Governance Rules](#exercise-05-data-governance-rules)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Let’s automate Primary Key generation](#exercise-06-lets-automate-primary-key-generation)
-
-## Chapter I
-## Preamble
-
-![D06_01](misc/images/D06_01.png)
-
-Why is a diamond one of the most durable objects? The reason is in the structure. Every atom knows about his place in diamond’s topology and makes the whole diamond unbreakable. 
-
-Logical structure is like a diamond. If you find an appropriate structure for your own Database Model then you find gold (or diamond :-). There are two aspects of Database Modeling. The first one is a logical view, in other words how your model will smoothly describe the real business world. 
-
-![D06_02](misc/images/D06_02.png)
-
-On the other hand, your model should solve your functional tasks with minimal impaction. It means, logical model view transforms to physical model view and not just from table and attributes descriptions. But actually, from performance and budget perspectives that are more mainly nowadays. How to find a balance? For this case there are 3 steps to create a very good design. Just take a look at the picture below. 
-
-![D06_03](misc/images/D06_03.png)
-
-
-## Chapter II
-## General Rules
-
-- Use this page as the only reference. Do not listen to any rumors and speculations on how to prepare your solution.
-- Please make sure you are using the latest version of PostgreSQL.
-- That is completely OK if you are using IDE to write a source code (aka SQL script).
-- To be assessed your solution must be in your GIT repository.
-- Your solutions will be evaluated by your piscine mates.
-- You should not leave in your directory any other file than those explicitly specified by the exercise instructions. It is recommended that you modify your `.gitignore` to avoid accidents.
-- Do you have a question? Ask your neighbor on the right. Otherwise, try with your neighbor on the left.
-- Your reference manual: mates / Internet / Google. 
-- Read the examples carefully. They may require things that are not otherwise specified in the subject.
-- And may the SQL-Force be with you!
-- Absolutely everything can be presented in SQL! Let’s start and have fun!
-
-## Chapter III
+# Day 06
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
@@ -98,7 +38,6 @@ On the other hand, your model should solve your functional tasks with minimal im
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restaurant (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
 
-## Chapter IV
 ## Exercise 00 - Discounts, discounts , everyone loves discounts
 
 | Exercise 00: Discounts, discounts , everyone loves discounts |                                                                                                                          |
@@ -117,9 +56,6 @@ Please think about personal discounts for people from one side and pizzeria rest
 - please set explicit names for foreign keys constraints by pattern fk_{table_name}_{column_name},  for example `fk_person_discounts_person_id`
 - add a discount attribute to store a value of discount in percent. Remember, discount value can be a number with floats (please just use `numeric` data type). So, please choose the corresponding data type to cover this possibility.
 
-
-
-## Chapter V
 ## Exercise 01 - Let’s set personal discounts
 
 | Exercise 01: Let’s set personal discounts|                                                                                                                          |
@@ -146,10 +82,6 @@ So, there is a table `person_order` that stores the history of a person's orders
     
     `... ROW_NUMBER( ) OVER ( ) AS id ...`
 
-
-
-
-## Chapter VI
 ## Exercise 02 - Let’s recalculate a history of orders
 
 | Exercise 02: Let’s recalculate a history of orders|                                                                                                                          |
@@ -167,7 +99,6 @@ Please write a SQL statement that returns orders with actual price and price wit
 | Andrey | mushroom pizza | 1100 | 858 | Dominos |
 | ... | ... | ... | ... | ... |
 
-## Chapter VII
 ## Exercise 03 - Improvements are in a way
 
 | Exercise 03: Improvements are in a way |                                                                                                                          |
@@ -188,7 +119,6 @@ The example of “proof” is below
     ...
 
 
-## Chapter VIII
 ## Exercise 04 - We need more Data Consistency
 
 
@@ -207,7 +137,6 @@ Please add the following constraint rules for existing columns of the `person_di
 - discount column should be in a range values from 0 to 100 (use constraint name `ch_range_discount`)
 
 
-## Chapter IX
 ## Exercise 05 - Data Governance Rules
 
 
@@ -220,7 +149,6 @@ Please add the following constraint rules for existing columns of the `person_di
 
 To satisfy Data Governance Policies need to add comments for the table and table's columns. Let’s apply this policy for the `person_discounts` table. Please add English or Russian comments (it's up to you) that explain what is a business goal of a table and all included attributes. 
 
-## Chapter X
 ## Exercise 06 - Let’s automate Primary Key generation
 
 
