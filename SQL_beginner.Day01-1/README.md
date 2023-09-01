@@ -1,71 +1,5 @@
 # Day 01
 
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Let’s make UNION dance](#exercise-00-lets-make-union-dance)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - UNION dance with subquery](#exercise-01-union-dance-with-subquery)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Duplicates or not duplicates](#exercise-02-duplicates-or-not-duplicates)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - “Hidden” Insights](#exercise-03-hidden-insights)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Difference? Yep, let's find the difference between multisets](#exercise-04-difference-yep-lets-find-the-difference-between-multisets)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Did you hear about Cartesian Product?](#exercise-05-did-you-hear-about-cartesian-product)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Lets see on “Hidden” Insights](#exercise-06-lets-see-on-hidden-insights)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Just make a JOIN](#exercise-07-just-make-a-join)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Migrate JOIN to NATURAL JOIN](#exercise-08-migrate-join-to-natural-join)
-13. [Chapter XIII](#chapter-xiii) \
-    13.1. [Exercise 09 - IN versus EXISTS](#exercise-09-in-versus-exists)
-14. [Chapter XIV](#chapter-xiv) \
-    14.1. [Exercise 10 - Global JOIN](#exercise-10-global-join)
-
-
-## Chapter I
-## Preamble
-
-In many aspects, sets are used in Relational Databases. Not just, make UNION or find MINUS between sets. Sets are also good candidates to make recursive queries.
-
-There are the next set operators in PostgreSQL. 
-- UNION [ALL]
-- EXCEPT [ALL] 
-- INTERSECT [ALL]
-
-Keyword “ALL” means to save duplicates of rows in the result.
-The main rules to work with sets are below
-- The main SQL provides final names of attributes for whole query
-- The attributes of controlled SQL should satisfy number of columns and corresponding family types of main SQL
-
-Moreover, SQL sets are useful  to calculate some specific Data Science metrics, for example Jaccard distance between 2 objects based on existing data features.
-
-
-## Chapter II
-## General Rules
-
-- Use this page as the only reference. Do not listen to any rumors and speculations on how to prepare your solution.
-- Please make sure you are using the latest version of PostgreSQL.
-- That is completely OK if you are using IDE to write a source code (aka SQL script).
-- To be assessed your solution must be in your GIT repository.
-- Your solutions will be evaluated by your piscine mates.
-- You should not leave in your directory any other file than those explicitly specified by the exercise instructions. It is recommended that you modify your `.gitignore` to avoid accidents.
-- Do you have a question? Ask your neighbor on the right. Otherwise, try with your neighbor on the left.
-- Your reference manual: mates / Internet / Google. 
-- Read the examples carefully. They may require things that are not otherwise specified in the subject.
-- And may the SQL-Force be with you!
-- Absolutely everything can be presented in SQL! Let’s start and have fun!
-
-## Chapter III
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
@@ -104,7 +38,6 @@ Moreover, SQL sets are useful  to calculate some specific Data Science metrics, 
 
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restraunt (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
-## Chapter IV
 ## Exercise 00 - Let’s make UNION dance
 
 | Exercise 00: Let’s make UNION dance |                                                                                                                          |
@@ -123,8 +56,6 @@ Please write a SQL statement which returns menu’s identifier and pizza names f
 | ... | ... |
 
 
-
-## Chapter V
 ## Exercise 01 - UNION dance with subquery
 
 | Exercise 01: UNION dance with subquery|                                                                                                                          |
@@ -146,7 +77,6 @@ Please modify a SQL statement from “exercise 00” by removing the object_id c
 | ... |
 
 
-## Chapter VI
 ## Exercise 02 - Duplicates or not duplicates
 
 | Exercise 02: Duplicates or not duplicates|                                                                                                                          |
@@ -160,7 +90,6 @@ Please modify a SQL statement from “exercise 00” by removing the object_id c
 
 Please write a SQL statement which returns unique pizza names from the `menu` table and orders by pizza_name column in descending mode. Please pay attention to the Denied section.
 
-## Chapter VII
 ## Exercise 03 - “Hidden” Insights
 
 | Exercise 03: “Hidden” Insights |                                                                                                                          |
@@ -183,7 +112,6 @@ Please write a SQL statement which returns common rows for attributes order_date
 | 2022-01-04 | 3 |
 | ... | ... |
 
-## Chapter VIII
 ## Exercise 04 - Difference? Yep, let's find the difference between multisets.
 
 
@@ -198,7 +126,6 @@ Please write a SQL statement which returns common rows for attributes order_date
 
 Please write a SQL statement which returns a difference (minus) of person_id column values with saving duplicates between `person_order` table and `person_visits` table for order_date and visit_date are for 7th of January of 2022
 
-## Chapter IX
 ## Exercise 05 - Did you hear about Cartesian Product?
 
 
@@ -218,7 +145,6 @@ Please write a SQL statement which returns all possible combinations between `pe
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
 
-## Chapter X
 ## Exercise 06 - Lets see on “Hidden” Insights
 
 
@@ -238,7 +164,6 @@ Let's return our mind back to exercise #03 and change our SQL statement to retur
 | 2022-01-01 | Andrey |
 | ... | ... |
 
-## Chapter XI
 ## Exercise 07 - Just make a JOIN
 
 
@@ -258,8 +183,6 @@ Please write a SQL statement which returns the date of order from the `person_or
 | 2022-01-01 | Anna (age:16) |
 | ... | ... |
 
-
-## Chapter XII
 ## Exercise 08 - Migrate JOIN to NATURAL JOIN
 
 
@@ -275,7 +198,6 @@ Please write a SQL statement which returns the date of order from the `person_or
 
 Please rewrite a SQL statement from exercise #07 by using NATURAL JOIN construction. The result must be the same like for exercise #07.  
 
-## Chapter XIII
 ## Exercise 09 - IN versus EXISTS
 
 
@@ -288,7 +210,6 @@ Please rewrite a SQL statement from exercise #07 by using NATURAL JOIN construct
 
 Please write 2 SQL statements which return a list of pizzerias names which have not been visited by persons by using IN for 1st one and EXISTS for the 2nd one.
 
-## Chapter XIV
 ## Exercise 10 - Global JOIN
 
 
