@@ -1,8 +1,4 @@
-# Day 01 - Piscine SQL
-
-## _First steps working with sets and JOINs in SQL_
-
-Resume: Today you will see how to get needed data based on sets constructions and simple JOINs
+# Day 01
 
 ## Contents
 
@@ -39,8 +35,6 @@ Resume: Today you will see how to get needed data based on sets constructions an
 ## Chapter I
 ## Preamble
 
-![D01_01](misc/images/D01_01.png)
-
 In many aspects, sets are used in Relational Databases. Not just, make UNION or find MINUS between sets. Sets are also good candidates to make recursive queries.
 
 There are the next set operators in PostgreSQL. 
@@ -52,8 +46,6 @@ Keyword “ALL” means to save duplicates of rows in the result.
 The main rules to work with sets are below
 - The main SQL provides final names of attributes for whole query
 - The attributes of controlled SQL should satisfy number of columns and corresponding family types of main SQL
-
-![D01_02](misc/images/D01_02.png)
 
 Moreover, SQL sets are useful  to calculate some specific Data Science metrics, for example Jaccard distance between 2 objects based on existing data features.
 
