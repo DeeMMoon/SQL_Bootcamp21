@@ -1,6 +1,5 @@
 # Day 02
 
-## Tasks
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
