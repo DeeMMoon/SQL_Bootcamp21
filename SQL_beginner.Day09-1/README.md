@@ -1,79 +1,5 @@
-# Day 09 - Piscine SQL
+# Day 09
 
-## _RDBMS is not just a tables_
-
-Resume: Today you will see how to create and use functional blocks in Databases
-
-## Contents
-
-1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Rules of the day](#rules-of-the-day)  
-4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Audit of incoming inserts](#exercise-00-audit-of-incoming-inserts)  
-5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Audit of incoming updates](#exercise-01-audit-of-incoming-updates)  
-6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Audit of incoming deletes](#exercise-02-audit-of-incoming-deletes)  
-7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Generic Audit](#exercise-03-generic-audit)  
-8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Database View VS Database Function](#exercise-04-database-view-vs-database-function)
-9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Parameterized Database Function](#exercise-05-parameterized-database-function)
-10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Function like a function-wrapper](#exercise-06-function-like-a-function-wrapper)
-11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Different view to find a Minimum](#exercise-07-different-view-to-find-a-minimum)
-12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Fibonacci algorithm is in a function](#exercise-08-fibonacci-algorithm-is-in-a-function)    
-      
-
-## Chapter I
-## Preamble
-
-![D09_01](misc/images/D09_01.png)
-
-There are a lot of functional programming languages in the RDBMS world. We can say mainly about “one-to-one” dependency between a particular RDBMS engine and functional language inside. Please take a look at a sample of these languages.
-- T-SQL
-- PL/SQL
-- SQL
-- PL/PGSQL
-- PL/R
-- PL/Python
-- etc.
-
-Actually, there are two opposite opinions in the IT world about where business logic should be located. The first opinion is on Application Level, the second one in RDBMS directly based on set UDF (User Defined Functions / Procedures / Packages). 
-Everyone chooses their own way to implement business logic. From my point of view, business logic should be in both places and I can say why.  
-Please take a look at the 2 simple architectures below. 
-
-|  |  |
-| ------ | ------ |
-| ![D09_02](misc/images/D09_02.png) | Everything is clear, frontends and backends are working through a special REST API layer that implements whole business logic. That's a really ideal application world. |
-| But, there are always some privileged guys / applications (like IDE) that are working directly with our databases and … our pattern can be broken. | ![D09_03](misc/images/D09_03.png) |
-
-Just think about it and try to create a clean architecture :-)
-
-
-## Chapter II
-## General Rules
-
-- Use this page as the only reference. Do not listen to any rumors and speculations on how to prepare your solution.
-- Please make sure you are using the latest version of PostgreSQL.
-- That is completely OK if you are using IDE to write a source code (aka SQL script).
-- To be assessed your solution must be in your GIT repository.
-- Your solutions will be evaluated by your piscine mates.
-- You should not leave in your directory any other file than those explicitly specified by the exercise instructions. It is recommended that you modify your `.gitignore` to avoid accidents.
-- Do you have a question? Ask your neighbor on the right. Otherwise, try with your neighbor on the left.
-- Your reference manual: mates / Internet / Google. 
-- Read the examples carefully. They may require things that are not otherwise specified in the subject.
-- And may the SQL-Force be with you!
-- Absolutely everything can be presented in SQL! Let’s start and have fun!
-
-## Chapter III
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
@@ -113,7 +39,6 @@ Just think about it and try to create a clean architecture :-)
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restraunt (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
 
-## Chapter IV
 ## Exercise 00 - Audit of incoming inserts
 
 | Exercise 00: Audit of incoming inserts |                                                                                                                          |
@@ -149,7 +74,6 @@ When you are ready with trigger objects then please make an `INSERT` statement i
 `INSERT INTO person(id, name, age, gender, address) VALUES (10,'Damir', 22, 'male', 'Irkutsk');`
 
 
-## Chapter V
 ## Exercise 01 - Audit of incoming updates
 
 | Exercise 01: Audit of incoming updates|                                                                                                                          |
@@ -167,7 +91,6 @@ When you are ready please apply UPDATE’s statements below.
 `UPDATE person SET name = 'Damir' WHERE id = 10;`
 
 
-## Chapter VI
 ## Exercise 02 - Audit of incoming deletes
 
 | Exercise 02: Audit of incoming deletes|                                                                                                                          |
@@ -183,7 +106,6 @@ When you are ready please apply the SQL statement below.
 
 `DELETE FROM person WHERE id = 10;`
 
-## Chapter VII
 ## Exercise 03 - Generic Audit
 
 | Exercise 03: Generic Audit |                                                                                                                          |
@@ -208,8 +130,6 @@ When you are ready, please re-apply the set of DML statements.
 `UPDATE person SET name = 'Damir' WHERE id = 10;`
 `DELETE FROM person WHERE id = 10;`
 
-
-## Chapter VIII
 ## Exercise 04 - Database View VS Database Function
 
 
@@ -233,8 +153,6 @@ To check yourself and call a function, you can make a statement like below (amaz
     SELECT *
     FROM fnc_persons_female();
 
-
-## Chapter IX
 ## Exercise 05 - Parameterized Database Function
 
 
@@ -256,8 +174,6 @@ To check yourself and call a function, you can make a statement like below (wow!
     select *
     from fnc_persons();
 
-
-## Chapter X
 ## Exercise 06 - Function like a function-wrapper
 
 
@@ -280,8 +196,6 @@ To check yourself and call a function, you can make a statement like below.
     select *
     from fnc_person_visits_and_eats_on_date(pperson := 'Anna',pprice := 1300,pdate := '2022-01-01');
 
-
-## Chapter XI
 ## Exercise 07 - Different view to find a Minimum
 
 
@@ -298,8 +212,6 @@ To check yourself and call a function, you can make a statement like below.
 
     SELECT func_minimum(VARIADIC arr => ARRAY[10.0, -1.0, 5.0, 4.4]);
 
-
-## Chapter XII
 ## Exercise 08 - Fibonacci algorithm is in a function
 
 
