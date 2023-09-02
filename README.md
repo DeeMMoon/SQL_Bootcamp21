@@ -5,11 +5,11 @@
 
 ## Context
 
-Day 1
+1. Day 1
   Today you will see how relational model works and how to get needed data based on basic constructions of SQL \
-Day 2
+2. Day 2
   Today you will see how to get needed data based on sets constructions and simple JOINs \
-Day 3
+3. Day 3
   Today you will see how to get needed data based on different structures JOINs \
 Day 4
   Today you will see how to change data based on DML language \
