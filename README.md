@@ -1,9 +1,9 @@
 # SQL_Training
 
-##Result
+## Result
 ![Result](./images/Result.png)
 
-##Context
+## Context
 
 Day 1
   Today you will see how relational model works and how to get needed data based on basic constructions of SQL
