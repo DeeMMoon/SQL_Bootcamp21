@@ -1,4 +1,4 @@
-# Day 04
+# Day 5
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
