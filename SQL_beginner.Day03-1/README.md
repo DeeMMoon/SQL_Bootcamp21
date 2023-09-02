@@ -1,4 +1,4 @@
-# Day 03
+# Day 4
 
 ## Rules of the day
 
