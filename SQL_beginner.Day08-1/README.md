@@ -1,4 +1,4 @@
-# Day 08
+# Day 9
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
@@ -38,14 +38,7 @@
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restraunt (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
 
-## Exercise 00 - Simple transaction
-
-| Exercise 00: Simple transaction |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex00                                                                                                                     |
-| Files to turn-in                      | `day08_ex00.sql` with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL|
+## Exercise 00 
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
@@ -85,14 +78,7 @@ So, take a look on example of my output for Session #2.
 
 You can see the same query returns different results, because the first one was run before publishing in Session#1 and the second one was queried after finished Session#1. 
 
-## Exercise 01 - Lost Update Anomaly
-
-| Exercise 01: Lost Update Anomaly|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex01                                                                                                                     |
-| Files to turn-in                      | `day08_ex01.sql` with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL                                                                                              |
+## Exercise 01 
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
@@ -112,14 +98,7 @@ If not, then please set “read committed” isolation level explicitly on a ses
 
 Please check a rating for “Pizza Hut” in a transaction mode for both Sessions and after that make `UPDATE` of rating to 4 value in session #1 and make `UPDATE` of rating to 3.6 value in session #2 (in the same order as in the picture). 
 
-## Exercise 02 - Lost Update for Repeatable Read
-
-| Exercise 02: Lost Update for Repeatable Read|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex02                                                                                                                     |
-| Files to turn-in                      | `day08_ex02.sql` with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                  |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL                                                                                              |
+## Exercise 02
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
@@ -131,15 +110,7 @@ Actually, we need two active sessions (meaning 2 parallel sessions in the comman
 
 Please check a rating for “Pizza Hut” in a transaction mode for both Sessions and after that make `UPDATE` of rating to 4 value in session #1 and make `UPDATE` of rating to 3.6 value in session #2 (in the same order as in the picture). 
 
-## Chapter VII
-## Exercise 03 - Non-Repeatable Reads Anomaly
-
-| Exercise 03: Non-Repeatable Reads Anomaly |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex03                                                                                                                     |
-| Files to turn-in                      | `day08_ex03.sql` with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL                                                                                              |
+## Exercise 03 
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
@@ -151,15 +122,7 @@ Actually, we need two active sessions (meaning 2 parallel sessions in the comman
 
 Please check a rating for “Pizza Hut” in a transaction mode for both Sessions and after that make `UPDATE` of rating to 3.6 value in session #2 (in the same order as in the picture). 
 
-## Exercise 04 - Non-Repeatable Reads for Serialization
-
-
-| Exercise 04: Non-Repeatable Reads for Serialization |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex04                                                                                                                     |
-| Files to turn-in                      | `day08_ex04.sql` with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL                                                                                              |
+## Exercise 04
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
@@ -171,15 +134,7 @@ Actually, we need two active sessions (meaning 2 parallel sessions in the comman
 
 Please check a rating for “Pizza Hut” in a transaction mode for both Sessions and after that make `UPDATE` of rating to 3.0 value in session #2 (in the same order as in the picture). 
 
-## Exercise 05 - Phantom Reads Anomaly
-
-
-| Exercise 05: Phantom Reads Anomaly|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex05                                                                                                                     |
-| Files to turn-in                      | `day08_ex05.sql`  with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |   SQL                                                                                              |
+## Exercise 05
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
@@ -191,16 +146,8 @@ Actually, we need two active sessions (meaning 2 parallel sessions in the comman
 
 Please summarize all ratings for all pizzerias in a transaction mode for both Sessions and after that make `UPDATE` of rating to 1 value for “Pizza Hut” restaurant in session #2 (in the same order as in the picture). 
 
- ## Exercise 06 - Phantom Reads for Repeatable Read
-
-
-| Exercise 06: Phantom Reads for Repeatable Read|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex06                                                                                                                     |
-| Files to turn-in                      | `day08_ex06.sql`  with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL                                                                                              |
-
+ ## Exercise 06
+ 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
 Actually, we need two active sessions (meaning 2 parallel sessions in the command lines).
@@ -212,15 +159,7 @@ Actually, we need two active sessions (meaning 2 parallel sessions in the comman
 
 Please summarize all ratings for all pizzerias in a transaction mode for both Sessions and after that make `UPDATE` of rating to 5 value for “Pizza Hut” restaurant in session #2 (in the same order as in the picture). 
 
-## Exercise 07 - Deadlock
-
-
-| Exercise 07: Deadlock|                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex07                                                                                                                     |
-| Files to turn-in                      | `day08_ex07.sql`    with comments for Session #1, Session #2 statements; screenshot of psql output for Session #1; screenshot of psql output for Session #2                                                                                |
-| **Allowed**                               |                                                                                                                          |
-| Language                        |  SQL                                                                                              |
+## Exercise 07
 
 Please for this task use the command line for PostgreSQL database (psql). You need to check how your changes will be published in the database for other database users. 
 
