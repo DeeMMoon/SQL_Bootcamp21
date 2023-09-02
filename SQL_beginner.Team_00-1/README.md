@@ -1,4 +1,4 @@
-# Team 00
+# Team 1
 ## General Rules
 
 - Use this page as the only reference. Do not listen to any rumors and speculations on how to prepare your solution.
@@ -13,13 +13,12 @@
 - And may the SQL-Force be with you!
 - Absolutely everything can be presented in SQL! Let’s start and have fun!
 
-## Chapter III
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
 - All tasks contain a list of Allowed and Denied sections with listed database options, database types, SQL constructions etc. Please have a look at the section before you start.
 
-## Exercise 00 - Classical TSP
+## Exercise 00
 
 ![T00_02](misc/images/T00_02.png)
 
@@ -37,10 +36,7 @@ The sample of output data you can find below. Please sort data by total_cost and
 | 80 | {a,b,d,c,a} |
 | ... | ... |
 
-## Chapter V
-## Exercise 01 - Opposite TSP
-
-| Exercise 01: Opposite TSP|                                                                                                                          |
+## Exercise 01                                                                                                                       |
 
 Please add a possibility to see additional rows with the most expensive cost to the SQL from previous exercise. Just take a look at the sample of data below. Please sort data by total_cost and then by tour.
 
