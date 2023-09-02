@@ -1,4 +1,4 @@
-# Team 01
+# Team 2
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
@@ -8,7 +8,7 @@
 
 ![schema](misc/images/schema.png)
 
-## Exercise 00 - Classical DWH
+## Exercise 00
 
 Let’s take a look at the data sources and first logical data layer (ODS - Operational Data Store) in the DWH.
 
@@ -132,7 +132,7 @@ Please take a look at a sample of output data below. Sort the result by user nam
 | Иван | Иванов | 1 | 410 | EUR | 0.9 | 369 |
 | ... | ... | ... | ... | ... | ... | ... |
 
-## Exercise 01 - Detailed Query
+## Exercise 01
 
 Before deeper diving into this task please apply INSERTs statements below.
 
