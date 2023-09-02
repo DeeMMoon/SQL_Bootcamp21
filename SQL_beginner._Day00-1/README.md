@@ -1,4 +1,4 @@
-# Day 00
+# Day 1
 ## Rules of the day
 
 - Please make sure you have an own database and access for it on your PostgreSQL cluster. 
@@ -37,27 +37,24 @@
 
 Persons' visit and persons' order are different entities and don't contain any correlation between data. For example, a client can be in one restaurant (just looking at menu) and in this time make an order in different one by phone or by mobile application. Or another case,  just be at home and again make a call with order without any visits.
 
-## Exercise 00 - First steps into SQL world
-
+## Exercise 00 
 Let’s make our first task. 
 Please make a select statement which returns all person's names and person's ages from the city ‘Kazan’.
 
 
-## Exercise 01 - First steps into SQL world
-
+## Exercise 01
 Please make a select statement which returns names , ages for all women from the city ‘Kazan’. Yep, and please sort result by name.
 
-## Exercise 02 - First steps into SQL world
+## Exercise 02 
 
 Please make 2 syntax different select statements which return a list of pizzerias (pizzeria name and rating) with rating between 3.5 and 5 points (including limit points) and ordered by pizzeria rating.
 - the 1st select statement must contain comparison signs  (<=, >=)
 - the 2nd select statement must contain `BETWEEN` keyword
 
-## Exercise 03 - First steps into SQL world
-
+## Exercise 03 
 Please make a select statement which returns the person's identifiers (without duplication) who visited pizzerias in a period from 6th of January 2022 to 9th of January 2022 (including all days) or visited pizzeria with identifier 2. Also include ordering clause by person identifier in descending mode.
 
-## Exercise 04 - First steps into SQL world
+## Exercise 04 
 
 Please make a select statement which returns one calculated field with name ‘person_information’ in one string like described in the next sample:
 
@@ -66,8 +63,7 @@ Please make a select statement which returns one calculated field with name ‘p
 Finally, please add the ordering clause by calculated column in ascending mode.
 Please pay attention to quote symbols in your formula!
 
-## Exercise 05 - First steps into SQL world
-
+## Exercise 05 
 Please make a select statement which returns person's names (based on internal query in `SELECT` clause) who made orders for the menu with identifiers 13 , 14 and 18 and date of orders should be equal 7th of January 2022. Be aware with "Denied Section" before your work.
 
 Please take a look at the pattern of internal query.
@@ -77,14 +73,14 @@ Please take a look at the pattern of internal query.
     FROM ...
     WHERE ...
 
-## Exercise 06 - First steps into SQL world
+## Exercise 06 
 
 Please use SQL construction from Exercise 05 and add a new calculated column (use column's name ‘check_name’) with a check statement (a pseudo code for this check is presented below) in the `SELECT` clause.
 
     if (person_name == 'Denis') then return true
         else return false
 
-## Exercise 07 - First steps into SQL world
+## Exercise 07 
 
 Let’s apply data intervals for the `person` table. 
 Please make a SQL statement which returns a person's identifiers, person's names and interval of person’s ages (set a name of a new calculated column as ‘interval_info’) based on pseudo code below. 
@@ -95,11 +91,11 @@ Please make a SQL statement which returns a person's identifiers, person's names
 
 and sort a result by ‘interval_info’ column in ascending mode.
 
-## Exercise 08 - First steps into SQL world
+## Exercise 08 
 
 Please make a SQL statement which returns all columns from the `person_order` table with rows whose identifier is an even number. The result have to order by returned identifier.
 
-## Exercise 09 - First steps into SQL world
+## Exercise 09 
 
 Please make a select statement that returns person names and pizzeria names based on the `person_visits` table with date of visit in a period from 07th of January to 09th of January 2022 (including all days) (based on internal query in `FROM` clause) .
 
