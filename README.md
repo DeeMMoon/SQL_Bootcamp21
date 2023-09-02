@@ -6,13 +6,13 @@
 ## Context
 
 Day 1
-  Today you will see how relational model works and how to get needed data based on basic constructions of SQL
+  Today you will see how relational model works and how to get needed data based on basic constructions of SQL \
 Day 2
-  Today you will see how to get needed data based on sets constructions and simple JOINs
+  Today you will see how to get needed data based on sets constructions and simple JOINs \
 Day 3
-  Today you will see how to get needed data based on different structures JOINs
+  Today you will see how to get needed data based on different structures JOINs \
 Day 4
-  Today you will see how to change data based on DML language
+  Today you will see how to change data based on DML language \
 Day 5
   Today you will see how to use a virtual view and physical snapshot of data
 Day 6
