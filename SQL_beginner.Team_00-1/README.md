@@ -36,7 +36,7 @@ The sample of output data you can find below. Please sort data by total_cost and
 | 80 | {a,b,d,c,a} |
 | ... | ... |
 
-## Exercise 01                                                                                                                       |
+## Exercise 01
 
 Please add a possibility to see additional rows with the most expensive cost to the SQL from previous exercise. Just take a look at the sample of data below. Please sort data by total_cost and then by tour.
 
